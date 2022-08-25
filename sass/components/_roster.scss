@@ -1,0 +1,100 @@
+.roster {
+    width: 80%;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__subject {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    &__starting5__subject,
+    &__sub__subject,
+    &__coach__subject {
+        align-self: start;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    &__starting5,
+    &__sub {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__player-box {
+        border: none;
+        background-color: $color-primary;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__player-box:hover &__player-detail {
+        background-color: rgba($color-primary-dark, 0.2);
+        box-shadow: 0 1rem 2rem rgba(black, 0.2);
+    }
+
+    &__player-photo {
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+
+    &__player-detail {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: all .5s;
+    }
+
+    &__player-name-and-position {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__player-name {
+        display: flex;
+        align-items: center;
+        font-size: 2.5rem;
+    }
+
+    &__player-position {
+        font-size: 1.7rem;
+        font-weight: 300;
+        color: $color-gray-dark-1;
+    }
+
+    &__player-number {
+        font-size: 4rem;
+        font-weight: 700;
+        align-self: start;
+    }
+
+    &__coach {
+        align-self: start;
+        display: flex;
+        gap: 3rem;
+    }
+
+    &__coach-level {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        height: 8rem;
+        color: $color-gray-dark-1;
+        text-decoration: underline;
+    }
+
+    &__coach-name {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}

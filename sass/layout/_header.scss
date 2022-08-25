@@ -1,0 +1,59 @@
+.header {
+    position: relative;
+    height: 80vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-dark, 0.8), rgba($color-primary, 0.8)), url(../../img/gsw_21_22.webp);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 75px;
+            transform: rotateY(180deg);
+            fill: $color-primary;
+        }
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
+
+    &__logo {
+        width: 5rem;
+    }
+
+    &__subject {
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: -2rem;
+        z-index: 2;
+
+        &--main {
+            display: block;
+            font-size: 5rem;
+            font-weight: 700;
+            letter-spacing: 1.5rem;
+            animation: moveFromLeft 1s ease-in-out;
+        }
+
+        &--sub {
+            display: block;
+            font-size: 2.5rem;
+            letter-spacing: 1.5rem;
+            animation: moveFromRight 1s ease-in-out;
+        }
+    }
+}
